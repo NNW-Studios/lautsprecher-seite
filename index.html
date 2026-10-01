@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loudspeakers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1e1e1e;
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        section {
+            padding: 2rem 1rem;
+            margin: 2rem 0;
+        }
+        h1, h2 {
+            color: #ff5722;
+        }
+        .hero {
+            background-image: url('https://via.placeholder.com/1200x400');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            text-align: center;
+            padding: 4rem 0;
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+            list-style-type: none;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background-color: #ff5722;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #ff5722;
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+        .timeline-item-content {
+            position: relative;
+            margin-left: 2rem;
+        }
+        footer {
+            background-color: #1e1e1e;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        footer a {
+            color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#how-it-works">How it Works</a>
+            <a href="#history">History</a>
+        </nav>
+    </header>
+    <section id="hero" class="hero">
+        <h1>Loudspeakers</h1>
+        <p>Discover the fascinating world of loudspeakers</p>
+    </section>
+    <section id="how-it-works">
+        <h2>How Loudspeakers Work</h2>
+        <p>A loudspeaker converts electrical signals into sound waves. The main components are:</p>
+        <ul>
+            <li><strong>Diaphragm:</strong> A thin, flexible membrane that vibrates to produce sound.</li>
+            <li><strong>Voice Coil:</strong> A coil of wire that moves back and forth in a magnetic field.</li>
+            <li><strong>Magnet:</strong> Creates a magnetic field that interacts with the voice coil.</li>
+        </ul>
+        <p>When an electrical signal is applied to the voice coil, it moves within the magnetic field, causing the diaphragm to vibrate and produce sound.</p>
+    </section>
+    <section id="history">
+        <h2>Where They Come From</h2>
+        <p>Loudspeakers have a rich history dating back to the 1800s. Key figures include:</p>
+        <ul>
+            <li>Thomas Edison</li>
+            <li>Edgar Rice Burroughs</li>
+            <li>Henry Kellogg</li>
+        </ul>
+    </section>
+    <section id="timeline">
+        <h2>Timeline of Loudspeaker History</h2>
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="timeline-item-content">
+                    <h3>1800s</h3>
+                    <p>First experiments in sound reproduction.</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-item-content">
+                    <h3>1920s</h3>
+                    <p>Development by Bell, Rice, and Kellogg.</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-item-content">
+                    <h3>1950s</h3>
+                    <p>Introduction of hi-fi technology.</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-item-content">
+                    <h3>1960s</h3>
+                    <p>Development of stereo systems.</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-item-content">
+                    <h3>2000s</h3>
+                    <p>Invention of Bluetooth speakers.</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-item-content">
+                    <h3>2010s</h3>
+                    <p>Emergence of smart speakers.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <p>© 2026 NNW Studios™ - NNW Records™ - Built by Nanda NW · <a href="https://github.com/NNW-Studios">GitHub</a></p>
+        <p>Website: © 2026 NNW Studios™ - Music: NNW Records™ - No cookies · No tracking · 100% green electricity for the NNW Studios network · <a href="https://nnws.qzz.io/privacy.html">Privacy Policy</a></p>
+    </footer>
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
